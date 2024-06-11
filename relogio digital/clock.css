@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+* { margin: 0;
+    padding: 0;
+    box-sizing: 0;
+} 
+
+body {
+    background-image: linear-gradient(to top, rgb(98, 135, 244), black);
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.clock h3 {
+    text-align: center;
+}
+/*.clock .timer div {
+    position: relative;
+    -webkit-box-reflect: below -50px linear-gradient(transparent,#0004);
+}
+.clock .timer div div {
+    display: flex;
+}*/
+
+.clock {   /*div maior que vai centralizar no meio*/
+    flex-direction: column;
+    width: 1000px;
+    height: 100vh;
+    display: flex;
+    /*background-color: rgba(172, 255, 47, 0.705);*/
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+#h3_clock {
+    font-size: 90px;
+    color: white;
+}
+
+.timer { /*div que se divide em outras 3
+    divs menores, a da  hr, min e seg*/
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    border-radius: 10px;
+    /*border: 1px solid rgba(255, 0, 0, 0.308);*/
+    width: 825px;
+    height: 350px;
+    justify-content: center;
+    background-color: #11202c;
+    column-gap: 15px;
+    -webkit-box-reflect: below -10px linear-gradient(transparent,rgba(0, 0, 0, 0.478));
+    box-shadow: -20px 0px 90px 7px black;
+}
+
+.div_hr {
+    border-radius: 10px 10px 0px 0px;
+    width: 275px;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #2196f3, #10426b );
+    
+}
+.div_min {
+    border-radius: 10px 10px 0px 0px;
+    width: 275px;
+    height: 350px;
+    /*display: block;
+    position: relative;*/
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #2196f3, #10426b );
+}
+.div_s {
+    border-radius: 10px 10px 0px 0px;
+    width: 275px;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #2196f3, #10426b );
+}
+
+/*.timer > div > div {
+    height: 175px;
+    justify-content: center;
+    align-items: center;
+}*/
+#hora, #minuto, #segundo {
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+}
+#hora_2, #minuto_2, #segundo_2 {
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+#hora p{
+    font-size: 140px;
+    padding-top: 25px;
+    /*padding-top: 100px; align-items: center; de cima resolveu*/
+}
+#minuto p {
+    font-size: 140px;
+    padding-top: 25px;
+}
+#segundo p {
+    font-size: 140px;
+    padding-top: 25px;
+}
+
+#hora_2 p {
+    padding-bottom: 25px;
+    font-size: 35px;
+}
+#minuto_2 p {
+    padding-bottom: 25px;
+    font-size: 35px;
+}
+#segundo_2 p {
+    padding-bottom: 25px;
+    font-size: 35px;
+}
+
+#hora_2, #minuto_2 ,#segundo_2 {
+    border-top: 4px solid black;
+}
+/*.div_hr .div_min .div_s > div > p  {
+    display: flex;
+    align-items: center;
+    padding-top: 150px;
+} não funfa*/

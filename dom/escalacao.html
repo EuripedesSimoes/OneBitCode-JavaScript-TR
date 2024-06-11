@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalação de time</title>
+    <script src="./escalacao.js"></script>
+</head>
+<body>
+    <h2>Escalação do Time</h2>
+    <hr>
+    <h3>Escalar jogador</h3>
+    <label for="position">Posição: </label>
+    <input type="text" placeholder="Ex: Ponta" id="position">
+    <br>
+    <br>
+    <button onclick="addPlayer()">Escalar jogador</button>
+    <hr>
+    <h3>Remover jogador</h3>
+    <label for="playerRemove">Remover:</label>
+    <input type="text" name="playerRemove" id="playerRemove">
+    <button onclick="removePlayer()">Remover Jogador</button>
+
+
+
+    <hr>
+    <h3>Time</h3>
+    <div id="div_prancheta"></div>
+    <!--<ul id="prancheta">-->
+
+    </ul>
+</body>
+</html>

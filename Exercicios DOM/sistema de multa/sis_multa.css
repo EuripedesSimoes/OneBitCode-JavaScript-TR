@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+* { margin: 0;
+    padding: 0;
+    box-sizing: 0;
+} 
+
+body {
+    background-color: burlywood;
+}
+
+.div1 {
+    background-color: coral;
+
+    flex-direction: column;
+    display: flex;
+    margin: 100px auto;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid black;
+    row-gap: 30px;
+    height: auto;
+    width: 400px;
+}
