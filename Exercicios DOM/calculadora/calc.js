@@ -22,9 +22,8 @@ input.addEventListener('keydown', function(ev){
         input.value = input.value.slice(0, -1)
     }
 
-    if (ev.key === 'Enter'){
-        calculate()
-    }
+    //if (ev.key === 'Enter'){
+    //    calculate() }
 }
 
 )

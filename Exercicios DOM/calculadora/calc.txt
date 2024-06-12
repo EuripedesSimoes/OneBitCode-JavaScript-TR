@@ -1,0 +1,21 @@
+calculadora
+
+- Faz funcoes basicas, soma, mult, etc
+- teclas digitadas ou clicadas aparecem no input de texto
+como "value" do input
+
+- ao apertar o enter ou clicar no AC/=, o value do input
+deve ser processado e em seguida devera retornar um novo 
+value baseado na operacao matematica que o usuario queria
+
+botoes 
+- 0 ao 9
+- +; -; */x; /
+- c(clear), apagar, virgula, enter
+
+PLUS
+- botoes para mudar o layout da calculadora
+1º- Padrao
+2º- Windows 10
+3º- Mac
+4º- Celular

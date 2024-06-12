@@ -1,7 +1,7 @@
 function show_result(){
     const n1 = document.getElementById('btn1')
     const inputResult = document.getElementById('showResult')
-    inputResult.innerText = 'n1'
+    inputResult.innerText = 'n1' //mds kk
 }
 
 
