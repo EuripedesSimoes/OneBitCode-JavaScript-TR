@@ -19,3 +19,5 @@ PLUS
 2º- Windows 10
 3º- Mac
 4º- Celular
+
+btn.innerText = 
