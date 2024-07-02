@@ -1,6 +1,8 @@
 
 const input = document.getElementById('input')
+const resultInput = document.getElementById("result")
 const allowedKeys = ['1','2','3','4','5','6','+','Esc']
+
 
 // Adicionar valor no input - 1: referenciar o próprio evento
 // 2: prevenir de repetir; 3: se as teclas apertadas do evento 
@@ -18,49 +20,53 @@ input.addEventListener('keydown', function(ev){
         input.value = input.value.slice(0, -1)
     }
     if (ev.key === 'Enter'){
-        //input.value += '0'
-        input.value = ''
+        calculate()
     }
-    let mais = document.getElementById('plus')
+
+   
+    /*let mais = document.getElementById('plus')
     let igual = document.getElementById('equal')
 
     mais.addEventListener('click', function(){
     const input1 = document.getElementById('input')
-    //const numbers = document.querySelectorAll('.charKey')
-    //if (numbers === '+'){
-    //let res = parseFloat(input.dataset.value)
-    //input.dataset.value = res 
+
     let n1 =+ input1.value
     n1 = parseFloat(n1)
     alert(n1)
     input1.value = n1+'+'
-
-    //if (ev.key === 'Enter'){
-    //    calculate() }
 }
-)
+)*/
 
+})
+
+/*1ºSelecionar todos que tem a classe 'charKey; 2º'Para cada um deles
+vai ser adicionado um função por clique que retorna o data-value do botão
+e vai parar direto no valor(value) do input*/
 document.querySelectorAll('.charKey').forEach(function (charKeyBtn){
     charKeyBtn.addEventListener('click', function(){
         const value = charKeyBtn.dataset.value
         input.value += value
+        input.focus()
     })
 }) 
 
-/*let mais = document.getElementById('plus')
-let igual = document.getElementById('equal')
-
-igual.addEventListener('click', function(){
-    const input1 = document.getElementById('input')
-    //const numbers = document.querySelectorAll('.charKey')
-    //if (numbers === '+'){
-    //let res = parseFloat(input.dataset.value)
-    //input.dataset.value = res 
-    let n1 =+ input1.value
-    n1 = parseFloat(n1)
-    alert(n1)
-    input1.value = n1+'+'
-//}
+document.getElementById('clear').addEventListener('click', function(){
+    input.value = ''
+    input.focus()
 })
-*/
 
+document.getElementById('apagar').addEventListener('click', function(){
+    input.value = input.value.slice(0,-1)
+    input.focus()
+})
+//dar uma olhada aqui no calculate() retornando
+document.getElementById('equal').addEventListener('click', calculate())
+
+function calculate() {
+    resultInput.value = "ERROR"
+    resultInput.classList.add("error")
+    const result = eval(input.value)
+    input.value = result
+    resultInput.value = result
+    resultInput.classList.remove("error")
+  }
