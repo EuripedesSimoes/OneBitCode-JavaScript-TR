@@ -2,6 +2,8 @@
 const input = document.getElementById('input')
 const resultInput = document.getElementById("result")
 const allowedKeys = ['1','2','3','4','5','6','+','Esc']
+/*resultInput.value = "0"
+input.value = '0'*/
 
 
 // Adicionar valor no input - 1: referenciar o próprio evento
@@ -20,22 +22,23 @@ input.addEventListener('keydown', function(ev){
         input.value = input.value.slice(0, -1)
     }
     if (ev.key === 'Enter'){
-        calculate()
+        calculateEnter()
+    }
+    function calculateEnter(){
+        if (input.value === ''){
+            input.value = 'ERROR'
+        }
+        else {
+        input.focus()
+        const resultEnter = eval(input.value)
+        resultInput.value = resultEnter 
+        input.value = resultInput.value
+    }
     }
 
-   
+    
     /*let mais = document.getElementById('plus')
-    let igual = document.getElementById('equal')
-
-    mais.addEventListener('click', function(){
-    const input1 = document.getElementById('input')
-
-    let n1 =+ input1.value
-    n1 = parseFloat(n1)
-    alert(n1)
-    input1.value = n1+'+'
-}
-)*/
+    let igual = document.getElementById('equal')*/
 
 })
 
@@ -60,13 +63,14 @@ document.getElementById('apagar').addEventListener('click', function(){
     input.focus()
 })
 //dar uma olhada aqui no calculate() retornando
-document.getElementById('equal').addEventListener('click', calculate())
-
-function calculate() {
-    resultInput.value = "ERROR"
-    resultInput.classList.add("error")
-    const result = eval(input.value)
-    input.value = result
-    resultInput.value = result
-    resultInput.classList.remove("error")
-  }
+document.getElementById('equal').addEventListener('click', function calculate(){
+    if (input.value === ''){
+        input.value = 'ERROR'
+    }
+    else {
+    input.focus()
+    const resultEnter = eval(input.value)
+    resultInput.value = resultEnter 
+    input.value = resultInput.value
+}
+})
