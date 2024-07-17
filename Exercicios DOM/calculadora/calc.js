@@ -1,7 +1,7 @@
 
 const input = document.getElementById('input')
 const resultInput = document.getElementById("result")
-const allowedKeys = ['1','2','3','4','5','6','+','Esc']
+const allowedKeys = ['1','2','3','4','5','6','7','8','9','0','+','-','*','/','=','(',')']
 /*resultInput.value = "0"
 input.value = '0'*/
 
@@ -35,7 +35,6 @@ input.addEventListener('keydown', function(ev){
         input.value = resultInput.value
     }
     }
-
     
     /*let mais = document.getElementById('plus')
     let igual = document.getElementById('equal')*/
