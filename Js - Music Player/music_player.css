@@ -5,20 +5,32 @@
     padding: 0;
     box-sizing: 0;
 }
+:root {
+    --cor1: linear-gradient(to bottom,rgba(72, 1, 172, 0.843),rgba(238, 130, 238, 0.83), rgba(255, 192, 203, 0.833), #ff7d7dd3 , rgba(251, 171, 23, 0.833));
+    /*--cor2: linear-gradient(to bottom, red, black);*/
+    --bg1: url('Cover 2.jpg')
+}
 
 body {
-    background-image: linear-gradient(to bottom,rgba(72, 1, 172, 0.843),rgba(238, 130, 238, 0.83), rgba(255, 192, 203, 0.833), #ff7d7dd3 , rgba(251, 171, 23, 0.833));
+    /*background-image: var(--cor1);*/
+    background-image: var(--bg1);
     height: 100vh;
     display: flex;
 }
+/*
+body img {
+
+}*/
 
 .body {
     height: 100vh;
     width: auto;
     border: 3px solid black;
-    background-color: transparent;
+    /*background-color: transparent;*/
+    background-repeat: no-repeat;
     overflow: hidden;
     justify-content: center;
+    object-fit: contain;
 }
 
 .main {
