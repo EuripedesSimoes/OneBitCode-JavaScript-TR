@@ -50,9 +50,12 @@ passar.addEventListener('click', () => {
     }
     
     img_cover.src = 'Cover '+cover_atual+'.jpg'
-    /*document.body.style.backgroundImage = 'var(--cor2)'*/
-    /*const cor2 =  root.style.setProperty('--cor2','')
-    document.body.style.backgroundImage = --cor2*/
+    document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
+
+
+
+    /*const cor2 =  root.style.setProperty('--bg2','')
+    document.body.style.backgroundImage = --bg2*/
 })
 
 
