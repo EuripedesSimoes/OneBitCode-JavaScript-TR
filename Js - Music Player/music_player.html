@@ -17,16 +17,28 @@
     <main class="main">
         <div class="div_pic">
             <img src="Cover 1.jpg" id="imgID" alt="">
-            <p class="music_name">My Ordinary life - The Living Tombstone</p>
+            <p class="music_name">Nome da Música</p>
         </div>
 
-        <div class="div_audio">
-        <audio id="music_audio" src="Audio 1.mp3" type="audio/mp3" controls></audio>
+        <div class="div_audio"><!--
+            <audio id="musicAudio" src="Audio 1.mp3" type="audio/mp3" controls></audio>
+        -->
+        <div> 
+            <div>
+                <div class="barra"></div>
+                <progress value="0.1" max="1"></progress>
+                <div class="ponto">ponto</div>
+            </div>
+            <div>
+                <p class="inicio_audio">0:00</p>
+                <p class="fim_audio">1:23</p>
+            </div>
+        </div>
         </div>
         
         <div class="div_pass">
             <button type="button" id="Back">Voltar</button>
-            <button type="button" id="Play_Pause">Play</button>
+            <button type="button" id="PlayPause">Play</button>
             <button type="button" id="Next">Próximo</button>
         </div>
     </main>

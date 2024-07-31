@@ -66,6 +66,12 @@ body {
     width: auto;
     padding-bottom: 20px;
 }
+.div_barra {
+    width: 300px;
+    height: 10px;
+    border: 2px solid red;
+
+}
 
 .div_pass {
     height: 125px;

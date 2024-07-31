@@ -4,8 +4,8 @@ let taTocando = 0
 const num_audio = 3
 const num_cover = 3
 const img_cover = document.getElementById('imgID')
-const PP = document.getElementById('Play_Pause')
-const MA = document.getElementById('music_audio')
+const PP = document.getElementById('PlayPause')
+const MA = document.getElementById('musicAudio')
 const passar = document.getElementById('Next')
 let root = document.querySelector(':root')
 
@@ -33,6 +33,8 @@ PP.addEventListener('click', PlayOrPause)
 passar.addEventListener('click', () => {
     if (audio_atual === num_audio){
         audio_atual = 1
+        /*MA.src = 'Audio 1.mp3'
+        taTocando = 1*/
     }
     else {
         audio_atual = audio_atual + 1
