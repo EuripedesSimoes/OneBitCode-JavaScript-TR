@@ -10,41 +10,37 @@
 </head>
 
 <body class="body">
-    <!---->
-    <aside>
-        <p>aside</p>
-    </aside>
     <main class="main">
         <div class="div_pic">
             <img src="Cover 1.jpg" id="imgID" alt="">
             <p class="music_name">Nome da Música</p>
         </div>
-
-        <div class="div_audio"><!--
+<!--
+        <div class="div_audio">
             <audio id="musicAudio" src="Audio 1.mp3" type="audio/mp3" controls></audio>
-        -->
-        <div> 
-            <div>
-                <div class="barra"></div>
-                <progress value="0.1" max="1"></progress>
-                <div class="ponto">ponto</div>
-            </div>
-            <div>
-                <p class="inicio_audio">0:00</p>
-                <p class="fim_audio">1:23</p>
-            </div>
-        </div>
-        </div>
         
+        </div>-->
+                <div class="barra">
+                    <progress value="0" max="1"></progress>
+                    <div class="ponto"></div>
+                </div>
+                <div class="tempo">
+                    <p class="inicio_audio">0:00</p>
+                    <p class="fim_audio">1:23</p>
+                </div>
+        
+               
         <div class="div_pass">
-            <button type="button" id="Back">Voltar</button>
+            <button type="button"><img src="rewind-button.png" alt=""></button>
+            <button type="button"><img src="play-button.png" alt=""></button>
+            <button type="button"><img src="forward-button.png" alt=""></button>
+
+
+          <!--  <button type="button" id="Back">Voltar</button>
             <button type="button" id="PlayPause">Play</button>
-            <button type="button" id="Next">Próximo</button>
-        </div>
+            <button type="button" id="Next">Próximo</button>-->
+        </div> 
     </main>
-    <section class="lyrics_session">
-        <p>lyrics</p>
-    </section>
 </body>
 
 </html>
