@@ -9,6 +9,9 @@ const MA = document.getElementById('musicAudio')
 const passar = document.getElementById('Next')
 let root = document.querySelector(':root')
 
+
+
+
 function play(){
     MA.play()
     taTocando = 1
@@ -33,8 +36,6 @@ PP.addEventListener('click', PlayOrPause)
 passar.addEventListener('click', () => {
     if (audio_atual === num_audio){
         audio_atual = 1
-        /*MA.src = 'Audio 1.mp3'
-        taTocando = 1*/
     }
     else {
         audio_atual = audio_atual + 1
@@ -51,14 +52,20 @@ passar.addEventListener('click', () => {
         cover_atual = cover_atual + 1
     }
     
-    img_cover.src = 'Cover '+cover_atual+'.jpg'
     document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
-
-
-
-    /*const cor2 =  root.style.setProperty('--bg2','')
-    document.body.style.backgroundImage = --bg2*/
 })
+/*pg.innerText = MA.currentTime = 0*/
+
+MA.addEventListener('timeupdate', attBar)
+
+function attBar(){
+    let pg = document.querySelector('progress')
+    pg.style.width = Math.floor((MA.currentTime/MA.duration)*100)+'%'
+    let fim_aud = document.querySelector('.fim_audio')
+    fim_aud.innerText = Math.floor(MA.duration/60)
+    let inicio_audio = document.querySelector('.inicio_audio')
+    inicio_audio.innerText = MA.duration
+}
 
 
 
