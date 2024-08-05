@@ -9,8 +9,7 @@ const MA = document.getElementById('musicAudio')
 const passar = document.getElementById('Next')
 let root = document.querySelector(':root')
 
-const progressBar = document.querySelector('.barra')
-const progressBar1 = document.getElementById("myProgress");
+const progressBar = document.getElementById("myProgress");
 const teste = document.getElementById('teste')
 
 
@@ -88,8 +87,16 @@ teste.addEventListener("click", (event) => {
 
 
 })*/
+progressBar.addEventListener('click', (ev) => {
+    let newTime = (ev.offsetX / progressBar.offsetWidth)
+    alert(newTime)
+    progressBar.value = newTime * 100
+})
+
+
 teste.addEventListener('click', (ev) => {
     let newTime = (ev.offsetX / teste.offsetWidth)
     /*alert(newTime)*/
     teste.value = newTime * 100
+    alert('cu')
 })
