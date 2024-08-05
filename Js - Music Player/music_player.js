@@ -9,6 +9,9 @@ const MA = document.getElementById('musicAudio')
 const passar = document.getElementById('Next')
 let root = document.querySelector(':root')
 
+const progressBar = document.querySelector('.barra')
+const progressBar1 = document.getElementById("myProgress");
+const teste = document.getElementById('teste')
 
 
 
@@ -66,6 +69,27 @@ function attBar(){
     let inicio_audio = document.querySelector('.inicio_audio')
     inicio_audio.innerText = MA.duration
 }
+/*
+progressBar.addEventListener('click', (ev) => {
+    let newTime = (ev.offsetX / progressBar.offsetWidth)
+    progressBar.duration
+    progressBar.currentTime = newTime
+})
+
+teste.addEventListener("click", (event) => {
+    const rect = progressBar1.getBoundingClientRect();
+    const clickX = event.clientX - rect.left;
+    const totalWidth = rect.width;
+    const newValue = (clickX / totalWidth) * 100;
+
+    // Atualize o valor da barra de progresso
+    progressBar1.value = newValue;
+});
 
 
-
+})*/
+teste.addEventListener('click', (ev) => {
+    let newTime = (ev.offsetX / teste.offsetWidth)
+    /*alert(newTime)*/
+    teste.value = newTime * 100
+})

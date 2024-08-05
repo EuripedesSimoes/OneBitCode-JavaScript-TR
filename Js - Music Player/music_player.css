@@ -84,6 +84,8 @@ audio {
 }progress {
     height: 10px;
     width: 0%;
+}.barra:hover {
+    cursor: pointer;
 }.ponto {
     height: 15px;
     width: 15px;
@@ -92,8 +94,7 @@ audio {
     border: 3px solid rgb(97, 97, 97);
     margin-top: -4px;
     margin-left: -10px;
-}
-.tempo {
+}.tempo {
     display: flex;
     justify-content: space-between;
     padding: 15px 10px;
@@ -126,5 +127,8 @@ audio {
 }
 .musicAudio {
     width: 30px;
+}
+#teste {
+    width: 100px;
 }
 
