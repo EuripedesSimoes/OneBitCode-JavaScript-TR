@@ -68,6 +68,7 @@ function attBar(){
     let pg = document.querySelector('progress')
     pg.value = Math.floor((MA.currentTime/MA.duration)*100)
     /*ponto.style.right = prog.value+'px'*/
+    ponto.style.marginLeft = (pg.value*3) +'px'
 
     //Atualização de minutagem
     let campoMinutos = Math.floor(MA.currentTime/60)
@@ -78,10 +79,8 @@ function attBar(){
     let inicio_audio = document.querySelector('.inicio_audio')
     inicio_audio.innerText = campoMinutos +':'+ campoSegundos
     
-
     let campoMin = Math.floor(MA.duration/60)
     let campoSeg = Math.floor(MA.duration%60)
-    
     if (campoSeg < 10){
         campoSeg = '0'+campoSeg
     }
@@ -89,9 +88,9 @@ function attBar(){
     fim_audio.innerText = campoMin +':'+ campoSeg
 
 
-    for (i=1;i<99;i++){
+    /*for (i=1;i<99;i++){
         ponto.style.right = ponto.style.right+i+'px';
-    }
+    }*/
 }
 
 //barras para clicar e pular minutagem

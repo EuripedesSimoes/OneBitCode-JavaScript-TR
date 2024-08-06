@@ -83,7 +83,7 @@ audio {
     display: flex;
 }progress {
     height: 30px;
-    width: 320px;
+    width: 100%;
     margin: -7px 0;
 }.barra:hover {
     cursor: pointer;
