@@ -76,7 +76,7 @@ audio {
 
 .barra {
     margin: 0 auto;
-    width: 320px;
+    width: 300px;
     height: 17px;
     border: 2.5px solid #aaaaaa;
     border-radius: 10px;
@@ -88,13 +88,13 @@ audio {
 }.barra:hover {
     cursor: pointer;
 }.ponto {
-    height: 20px;
-    width: 20px;
+    height: 22px;
+    width: 22px;
     background-color: #cfcfcf;
     border-radius: 50%;
     border: 3px solid rgb(97, 97, 97);
     margin-top: -5px;
-    margin-left: -7px;
+    margin-left: -2px;
     position: absolute;
 }.tempo {
     display: flex;
@@ -129,8 +129,20 @@ audio {
 }
 .musicAudio {
     width: 30px;
-}
+}/*
 #teste {
     width: 100px;
+}*/
+/*
+#myProgress {
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 5px solid #000;
+    height: 40px
 }
+
+#myProgress::-webkit-progress-bar,
+#myProgress::-webkit-progress-value{
+    background-color: #7C5E99;
+}*/
 

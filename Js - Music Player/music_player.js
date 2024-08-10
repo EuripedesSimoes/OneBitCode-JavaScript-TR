@@ -48,7 +48,8 @@ passar.addEventListener('click', () => {
     MA.play()
     taTocando = 1
     PP.innerText = 'Pausar'
-    ponto.style.left = "228px"
+    /*ponto.style.left = (barra.offsetWidth/90%+'px')*/
+    /*ponto.style.left = "228px"*/
     /*ponto.style.right = '0px'*/
     
     if (cover_atual === num_cover){
@@ -68,8 +69,17 @@ function attBar(){
     let pg = document.querySelector('progress')
     pg.value = Math.floor((MA.currentTime/MA.duration)*100)
     /*ponto.style.right = prog.value+'px'*/
-    ponto.style.marginLeft = (pg.value*3) +'px'
-
+    if (pg.value < 10) {
+    ponto.style.marginLeft = (pg.value*1.4) +'px'
+}else if(pg.value < 20){
+    ponto.style.marginLeft = (pg.value*2.2) +'px'
+}else if(pg.value < 30){
+    ponto.style.marginLeft = (pg.value*2.4) +'px'
+}else if(pg.value < 40){
+    ponto.style.marginLeft = (pg.value*2.6) +'px'
+}else {
+    ponto.style.marginLeft = (pg.value*2.8) +'px'
+}
     //Atualização de minutagem
     let campoMinutos = Math.floor(MA.currentTime/60)
     let campoSegundos = Math.floor(MA.currentTime%60)
