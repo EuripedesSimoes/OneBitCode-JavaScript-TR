@@ -10,6 +10,8 @@
     --cor2: linear-gradient(to bottom, red, black);*/
     --bg1: url('Cover 1.jpg');
     --bg2: url('Cover 2.jpg');
+    --pg1: #dbdbdb;
+    --pg2: rgb(123, 190, 212);
 }
 
 body {
@@ -78,14 +80,15 @@ audio {
     margin: 0 auto;
     width: 300px;
     height: 17px;
-    border: 2.5px solid #aaaaaa;
+    border: 3.5px solid black;
     border-radius: 10px;
     display: flex;
-}progress {
+    
+}/*progress {
     height: 30px;
     width: 100%;
     margin: -7px 0;
-}.barra:hover {
+}*/.barra:hover {
     cursor: pointer;
 }.ponto {
     height: 22px;
@@ -133,16 +136,26 @@ audio {
 #teste {
     width: 100px;
 }*/
-/*
 #myProgress {
-    box-sizing: border-box;
+    height: 17px;
+    width: 100%;
+    margin: 0 0;
+    
     background-color: #fff;
-    border: 5px solid #000;
-    height: 40px
+    background-color: transparent;
 }
 
-#myProgress::-webkit-progress-bar,
+
+#myProgress::-webkit-progress-bar {
+    /*background-color: rgb(124, 50, 50);*/
+    background-color: var(--pg1);
+    border-radius: 10px;
+}
+
 #myProgress::-webkit-progress-value{
-    background-color: #7C5E99;
-}*/
+    border-radius: 10px;
+    /*background-color: #7C5E99;*/
+    background-color: var(--pg2);
+    
+}
 

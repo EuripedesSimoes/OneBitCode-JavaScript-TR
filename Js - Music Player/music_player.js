@@ -15,7 +15,7 @@ const teste = document.getElementById('teste')
 const ponto = document.querySelector('.ponto')
 
 
-
+// play ou pause
 function play(){
     MA.play()
     taTocando = 1
@@ -37,6 +37,8 @@ function PlayOrPause(){
 }
 PP.addEventListener('click', PlayOrPause)
 
+
+//função de passar o audio
 passar.addEventListener('click', () => {
     if (audio_atual === num_audio){
         audio_atual = 1
@@ -48,9 +50,7 @@ passar.addEventListener('click', () => {
     MA.play()
     taTocando = 1
     PP.innerText = 'Pausar'
-    /*ponto.style.left = (barra.offsetWidth/90%+'px')*/
-    /*ponto.style.left = "228px"*/
-    /*ponto.style.right = '0px'*/
+
     
     if (cover_atual === num_cover){
         cover_atual = 1
@@ -62,7 +62,7 @@ passar.addEventListener('click', () => {
 })
 
 
-
+//função de atualizar o ponto junto com o valor do progresso
 MA.addEventListener('timeupdate', attBar)
 //sem esse nao funfa
 function attBar(){
@@ -96,27 +96,20 @@ function attBar(){
     }
     let fim_audio = document.querySelector('.fim_audio')
     fim_audio.innerText = campoMin +':'+ campoSeg
-
-
-    /*for (i=1;i<99;i++){
-        ponto.style.right = ponto.style.right+i+'px';
-    }*/
 }
 
-//barras para clicar e pular minutagem
 
+//barras para clicar e pular minutagem
 progressBar.addEventListener('click', (ev)=>{
     let newTime = (ev.offsetX / progressBar.offsetWidth) * MA.duration
     MA.currentTime = newTime
 })
-
-progressBar.addEventListener("input", () => {
+//esse parece não fazer nada
+/*progressBar.addEventListener("input", () => {
     const value = progressBar.value;
     const containerWidth = progressBar.offsetWidth;
     const pontoPosition = (value * 3) * containerWidth;
-
-    
-});
+});*/
 
 
 
