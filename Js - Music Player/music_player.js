@@ -7,6 +7,7 @@ const img_cover = document.getElementById('imgID')
 const PP = document.getElementById('PlayPause')
 const MA = document.getElementById('musicAudio')
 const passar = document.getElementById('Next')
+const voltar = document.getElementById('Back')
 let root = document.querySelector(':root')
 
 const barra = document.querySelector('.barra')
@@ -49,9 +50,7 @@ passar.addEventListener('click', () => {
     MA.src = "Audio " + audio_atual + ".mp3"
     MA.play()
     taTocando = 1
-    PP.innerText = 'Pausar'
 
-    
     if (cover_atual === num_cover){
         cover_atual = 1
     }
@@ -59,7 +58,31 @@ passar.addEventListener('click', () => {
         cover_atual = cover_atual + 1
     }
     document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
+    img_cover.src = 'Small_Cover '+cover_atual+'.jpg'
 })
+//função de voltar o audio
+function voltarFaixa (){
+    if (audio_atual === 1){
+        audio_atual = num_audio 
+    }else {
+        audio_atual = audio_atual - 1
+    }
+    MA.src = "Audio " + audio_atual + ".mp3"
+    MA.play()
+    taTocando = 1
+
+    if (cover_atual === 1){
+        cover_atual = num_cover
+    }
+    else {
+        cover_atual = cover_atual - 1
+    }
+    document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
+    img_cover.src = 'Small_Cover '+cover_atual+'.jpg'
+}
+voltar.addEventListener('click',voltarFaixa)
+
+
 
 
 //função de atualizar o ponto junto com o valor do progresso
