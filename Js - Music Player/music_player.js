@@ -15,7 +15,8 @@ const progressBar = document.getElementById("myProgress");
 const teste = document.getElementById('teste')
 const ponto = document.querySelector('.ponto')
 
-
+const msc_org = ['Doom Eternal', ]
+const msc_name = ['The Only Thing They Fear Is You']
 // play ou pause
 function play(){
     MA.play()
