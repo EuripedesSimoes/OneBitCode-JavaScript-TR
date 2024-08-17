@@ -1,3 +1,5 @@
+import { music_name, music_origin, msc_name, msc_org } from "./funcoes.js"
+
 let audio_atual = 1
 let cover_atual = 1
 let taTocando = 0
@@ -15,18 +17,21 @@ const progressBar = document.getElementById("myProgress");
 const teste = document.getElementById('teste')
 const ponto = document.querySelector('.ponto')
 
-const msc_org = ['Doom Eternal', ]
-const msc_name = ['The Only Thing They Fear Is You']
+
+
+
 // play ou pause
 function play(){
     MA.play()
     taTocando = 1
-    PP.innerText = 'Pausar'
+    PP.src = 'imgs-msc_player/pause-button.png'
+    /*PP.innerText = 'Pausar'*/
 }
 function pause(){
     MA.pause()
     taTocando = 0
-    PP.innerText = 'Play'
+    PP.src = 'imgs-msc_player/play-button.png'
+    /*PP.innerText = 'Play'*/
 }
 
 function PlayOrPause(){
@@ -59,7 +64,9 @@ passar.addEventListener('click', () => {
         cover_atual = cover_atual + 1
     }
     document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
-    img_cover.src = 'Small_Cover '+cover_atual+'.jpg'
+    img_cover.src = 'imgs-msc_player/Small_Cover '+cover_atual+'.jpg'
+    music_name.innerText = msc_name[cover_atual]
+    PP.src = 'imgs-msc_player/pause-button.png'
 })
 //função de voltar o audio
 function voltarFaixa (){
@@ -79,7 +86,9 @@ function voltarFaixa (){
         cover_atual = cover_atual - 1
     }
     document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
-    img_cover.src = 'Small_Cover '+cover_atual+'.jpg'
+    img_cover.src = 'imgs-msc_player/Small_Cover '+cover_atual+'.jpg'
+    music_name.innerText = msc_name[cover_atual]
+    PP.src = 'imgs-msc_player/pause-button.png'
 }
 voltar.addEventListener('click',voltarFaixa)
 
@@ -93,16 +102,17 @@ function attBar(){
     let pg = document.querySelector('progress')
     pg.value = Math.floor((MA.currentTime/MA.duration)*100)
     /*ponto.style.right = prog.value+'px'*/
-    if (pg.value < 10) {
-    ponto.style.marginLeft = (pg.value*1.4) +'px'
+    if (pg.value <= 10) {
+    ponto.style.marginLeft = (pg.value*1.8) +'px'
 }else if(pg.value < 20){
+    ponto.style.marginLeft = (pg.value*1.8) +'px'
+}else if(pg.value <= 30){
     ponto.style.marginLeft = (pg.value*2.2) +'px'
-}else if(pg.value < 30){
-    ponto.style.marginLeft = (pg.value*2.4) +'px'
-}else if(pg.value < 40){
-    ponto.style.marginLeft = (pg.value*2.6) +'px'
-}else {
-    ponto.style.marginLeft = (pg.value*2.8) +'px'
+}else if(pg.value <= 40){
+    ponto.style.marginLeft = (pg.value*2.3) +'px'
+}
+else if (pg.value >50){
+    ponto.style.marginLeft = (pg.value*2.5) +'px'
 }
     //Atualização de minutagem
     let campoMinutos = Math.floor(MA.currentTime/60)
