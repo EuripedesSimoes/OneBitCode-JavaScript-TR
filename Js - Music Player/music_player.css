@@ -83,7 +83,7 @@ audio {
 
 .barra {
     margin: 0 auto;
-    width: 300px;
+    width: 280px;
     height: 17px;
     border: 3.5px solid black;
     border-radius: 10px;
@@ -100,8 +100,8 @@ audio {
     width: 22px;
     background-color: #cfcfcf;
     border-radius: 50%;
-    border: 3px solid rgb(97, 97, 97);
-    margin-top: -5px;
+    border: 5px solid rgb(97, 97, 97);
+    margin-top: -7px;
     margin-left: -2px;
     position: absolute;
 }.tempo {
