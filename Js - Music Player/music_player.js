@@ -102,8 +102,8 @@ function attBar(){
     let pg = document.querySelector('progress')
     pg.value = Math.floor((MA.currentTime/MA.duration)*100)
     /*ponto.style.right = prog.value+'px'*/
-    if (pg.value < 40) {
-    ponto.style.marginLeft = (pg.value*2.15) +'px'
+    if (pg.value < 15) {
+    ponto.style.marginLeft = ((pg.value-0.5)*1.8) +'px'
 }/*else if(pg.value < 20){
     ponto.style.marginLeft = (pg.value*1.8) +'px'
 }else if(pg.value <= 30){
@@ -111,8 +111,13 @@ function attBar(){
 }else if(pg.value <= 40){
     ponto.style.marginLeft = (pg.value*2.3) +'px'
 }*/
-else if (pg.value >= 40){
-    ponto.style.marginLeft = ((pg.value-4.5)*2.6) +'px'
+else if (pg.value >= 50){
+    ponto.style.marginLeft = ((pg.value-7)*2.1) +'px'
+}
+else if (pg.value >= 50){
+    ponto.style.marginLeft = ((pg.value-7)*2.6) +'px'
+}else if (pg.value >= 80){
+    ponto.style.marginLeft = ((pg.value-4.7)*2.6) +'px'
 }
     //Atualização de minutagem
     let campoMinutos = Math.floor(MA.currentTime/60)
