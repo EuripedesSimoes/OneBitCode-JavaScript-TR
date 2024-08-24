@@ -104,20 +104,15 @@ function attBar(){
     /*ponto.style.right = prog.value+'px'*/
     if (pg.value < 15) {
     ponto.style.marginLeft = ((pg.value-0.5)*1.8) +'px'
-}/*else if(pg.value < 20){
-    ponto.style.marginLeft = (pg.value*1.8) +'px'
-}else if(pg.value <= 30){
-    ponto.style.marginLeft = (pg.value*2.2) +'px'
-}else if(pg.value <= 40){
-    ponto.style.marginLeft = (pg.value*2.3) +'px'
-}*/
-else if (pg.value >= 50){
-    ponto.style.marginLeft = ((pg.value-7)*2.1) +'px'
 }
-else if (pg.value >= 50){
-    ponto.style.marginLeft = ((pg.value-7)*2.6) +'px'
-}else if (pg.value >= 80){
-    ponto.style.marginLeft = ((pg.value-4.7)*2.6) +'px'
+else if (pg.value <= 40){
+    ponto.style.marginLeft = ((pg.value-3)*2.25) +'px'
+}
+else if (pg.value <= 80){
+    ponto.style.marginLeft = ((pg.value-8.5)*2.68) +'px'
+}
+else if (pg.value > 80){
+    ponto.style.marginLeft = ((pg.value-10)*2.76) +'px'
 }
     //Atualização de minutagem
     let campoMinutos = Math.floor(MA.currentTime/60)
