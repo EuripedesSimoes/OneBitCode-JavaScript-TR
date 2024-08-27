@@ -66,6 +66,7 @@ passar.addEventListener('click', () => {
     document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
     img_cover.src = 'imgs-msc_player/Small_Cover '+cover_atual+'.jpg'
     music_name.innerText = msc_name[cover_atual]
+    music_origin.innerText = msc_org[cover_atual]
     PP.src = 'imgs-msc_player/pause-button.png'
 })
 //função de voltar o audio
@@ -88,6 +89,7 @@ function voltarFaixa (){
     document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
     img_cover.src = 'imgs-msc_player/Small_Cover '+cover_atual+'.jpg'
     music_name.innerText = msc_name[cover_atual]
+    music_origin.innerText = msc_org[cover_atual]
     PP.src = 'imgs-msc_player/pause-button.png'
 }
 voltar.addEventListener('click',voltarFaixa)

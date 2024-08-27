@@ -40,7 +40,7 @@ audio {
 .main {
     height: 630px;
     width: 340px;
-    background-color: rgba(134, 162, 172, 0.233);
+    background-color: rgba(114, 138, 146, 0.233);
     /*
     border: 2px dashed darkblue;
     background-attachment: fixed;*/
@@ -51,14 +51,10 @@ audio {
 }
 
 
-
 .div_pic {
     /*padding-top: 50px;*/
     height: 440px;
     width: 340px;
-    /*
-    background-color: aquamarine;
-    border: 1px dashed yellow;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,16 +66,6 @@ audio {
     border: 3.6px solid black;
     margin-bottom: 15px;
 }
-/* n existe mais
-.div_audio {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 90px;
-    width: auto;
-    padding-bottom: 20px;
-}*/
 
 .barra {
     margin: 0 auto;
@@ -113,12 +99,12 @@ audio {
 }
 
 
-
 .div_pass {
-    height: 85px;
+    height: 105px;
     width: auto;
-    /*background-color: rgb(78, 129, 112);*/
-    border: 1px dashed yellow;
+    /*
+    border: 1px dashed yellow;*/
+    background-color: #439e66;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,11 +112,12 @@ audio {
     /*
     padding-top: 20px;*/
 }.div_pass button {
-    background-color: gainsboro;
+    background-color: transparent;
     border: none;
+    /*
     border-radius: 25%;
     border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-bottom-right-radius: 40px;*/
     width: 76px;
     height: 76px;
 }
@@ -138,26 +125,21 @@ audio {
     cursor: pointer;
 }
 .div_pass button img {
-    width: 82px;
-    height: 82px;
+    width: 86px;
+    height: 86px;
     
 }
 .musicAudio {
     width: 30px;
-}/*
-#teste {
-    width: 100px;
-}*/
+}
+
 #myProgress {
     height: 17px;
     width: 100%;
     margin: 0 0;
-    
-    background-color: #fff;
+    /*background-color: #fff;*/
     background-color: transparent;
 }
-
-
 #myProgress::-webkit-progress-bar {
     /*background-color: rgb(124, 50, 50);*/
     background-color: var(--pg1);
