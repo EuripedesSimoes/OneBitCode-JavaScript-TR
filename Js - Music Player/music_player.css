@@ -104,7 +104,8 @@ audio {
     width: auto;
     /*
     border: 1px dashed yellow;*/
-    background-color: #439e66;
+    /*background-color: #439e66;*/
+    background-color: rgba(219, 201, 219, 0.233);
     display: flex;
     justify-content: center;
     align-items: center;
