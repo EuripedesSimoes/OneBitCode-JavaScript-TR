@@ -12,12 +12,11 @@ const passar = document.getElementById('Next')
 const voltar = document.getElementById('Back')
 let root = document.querySelector(':root')
 
-const barra = document.querySelector('.barra')
 const progressBar = document.getElementById("myProgress");
-const teste = document.getElementById('teste')
 const ponto = document.querySelector('.ponto')
-
-
+/*
+const barra = document.querySelector('.barra')
+*/
 
 
 // play ou pause
@@ -47,6 +46,7 @@ PP.addEventListener('click', PlayOrPause)
 
 //função de passar o audio
 passar.addEventListener('click', () => {
+    //Trocar o audio
     if (audio_atual === num_audio){
         audio_atual = 1
     }
@@ -57,6 +57,7 @@ passar.addEventListener('click', () => {
     MA.play()
     taTocando = 1
 
+    //Trocar a capa da música
     if (cover_atual === num_cover){
         cover_atual = 1
     }
@@ -65,12 +66,14 @@ passar.addEventListener('click', () => {
     }
     document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
     img_cover.src = 'imgs-msc_player/Small_Cover '+cover_atual+'.jpg'
+    // Troca a origem e o nome da música
     music_name.innerText = msc_name[cover_atual]
     music_origin.innerText = msc_org[cover_atual]
     PP.src = 'imgs-msc_player/pause-button.png'
 })
 //função de voltar o audio
 function voltarFaixa (){
+    // Troca o audio
     if (audio_atual === 1){
         audio_atual = num_audio 
     }else {
@@ -80,6 +83,7 @@ function voltarFaixa (){
     MA.play()
     taTocando = 1
 
+    // Troca a capa da música
     if (cover_atual === 1){
         cover_atual = num_cover
     }
@@ -88,6 +92,7 @@ function voltarFaixa (){
     }
     document.body.style.backgroundImage = 'var(--bg'+cover_atual+')'
     img_cover.src = 'imgs-msc_player/Small_Cover '+cover_atual+'.jpg'
+    // Troca a origem e o nome da música
     music_name.innerText = msc_name[cover_atual]
     music_origin.innerText = msc_org[cover_atual]
     PP.src = 'imgs-msc_player/pause-button.png'
@@ -151,36 +156,3 @@ progressBar.addEventListener('click', (ev)=>{
 
 
 
-/*
-barra.addEventListener('click', (ev)=>{
-const mouseX = ev.clientX - barra.offsetWidth+312;
-ponto.style.left = `${mouseX}px`;
-})*/
-
-// mudar o value ao clicar
-/*barra.addEventListener('click', (ev) => {
-    let newTime = (ev.offsetX / barra.offsetWidth)
-    progressBar.value = Math.floor(newTime * 100)
-    progressBar.style.width = Math.floor(newTime * 100)+'%'
-    MA.currentTime = Math.floor(newTime * 100)
-})*/
-
-
-
-//barra de teste
-/* 
-teste.addEventListener('click', (ev) => {
-    let newTime = (ev.offsetX / teste.offsetWidth)
-    /*alert(newTime)
-    teste.value = newTime * 100
-    alert('cu')
-})*/
-
-
-/*
-progressBar.addEventListener('click', (ev) => {
-    let newTime = (ev.offsetX / progressBar.offsetWidth)
-    progressBar.duration
-    progressBar.currentTime = newTime
-})
-)*/
