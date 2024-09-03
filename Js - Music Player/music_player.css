@@ -154,4 +154,39 @@ body {
     background-color: var(--pg2);
     
 }
-
+#volume {
+    height: 20px;
+    width: 20px;
+    background-color: coral;
+}
+#volume2:hover {
+    flex: 2;
+}
+#volume2 {
+    margin-left: 161px;
+    height: 20px;
+    width: 130px;
+    background-color: aqua;
+    position: absolute;
+    display: block;
+}
+#vol2 {
+    margin-left: 161px;
+    /*flex: 2;*/
+    margin-top: -5px;
+    height: 30px;
+    width: 130px;
+    background-color: aqua;
+    position: absolute;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: block
+}
+#prog_vol {
+    width: 100%;
+}
+/*
+#volume2:hover {
+    display: block;
+}
+*/

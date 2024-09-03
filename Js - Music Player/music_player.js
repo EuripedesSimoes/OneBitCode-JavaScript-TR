@@ -100,8 +100,6 @@ function voltarFaixa (){
 voltar.addEventListener('click',voltarFaixa)
 
 
-
-
 //função de atualizar o ponto junto com o valor do progresso
 MA.addEventListener('timeupdate', attBar)
 //sem esse nao funfa
@@ -153,6 +151,11 @@ progressBar.addEventListener('click', (ev)=>{
 });*/
 
 
+const vol = document.getElementById('volume')
+const vol2 = document.getElementById('volume2')
 
-
-
+vol.addEventListener('mouseenter', () => {
+    /*vol2.style.display = 'block'*/
+    vol2.setAttribute('id','vol2')
+})
+vol
