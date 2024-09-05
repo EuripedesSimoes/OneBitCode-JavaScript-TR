@@ -13,7 +13,6 @@ const voltar = document.getElementById('Back')
 let root = document.querySelector(':root')
 
 const progressBar = document.getElementById("myProgress");
-const progVol = document.getElementById('prog_vol')
 const ponto = document.querySelector('.ponto')
 /*
 const barra = document.querySelector('.barra')
@@ -25,12 +24,14 @@ function play(){
     MA.play()
     taTocando = 1
     PP.src = 'imgs-msc_player/pause-button.png'
+    MA.volume = 0.5
     /*PP.innerText = 'Pausar'*/
 }
 function pause(){
     MA.pause()
     taTocando = 0
     PP.src = 'imgs-msc_player/play-button.png'
+    MA.volume = 0.5
     /*PP.innerText = 'Play'*/
 }
 
@@ -139,6 +140,9 @@ else if (pg.value > 80){
 }
 
 
+
+const progVol = document.getElementById('prog_vol')
+
 //barras para clicar e pular minutagem
 progressBar.addEventListener('click', (ev)=>{
     let newTime = (ev.offsetX / progressBar.offsetWidth) * MA.duration
@@ -146,8 +150,9 @@ progressBar.addEventListener('click', (ev)=>{
 })
 //barra para alterar o volume
 progVol.addEventListener('click', (ev)=>{
-    let newVol = (ev.offsetX / progVol.offsetWidth) * 100
+    let newVol = (ev.offsetX / progVol.offsetWidth) * 1
     progVol.value = newVol
+    MA.volume = progVol.value
 })
 //esse parece não fazer nada
 /*progressBar.addEventListener("input", () => {
@@ -159,29 +164,20 @@ progVol.addEventListener('click', (ev)=>{
 
 const vol = document.getElementById('volume')
 const vol2 = document.getElementById('volume2')
-let VolYN = 0
 
 vol.addEventListener('mouseenter', () => {
     vol2.setAttribute('id','vol_on')
-    VolYN = 1
     /*vol2.style.display = 'block'
     vol2.style.transition = '0.5s'*/
     
 })
 vol.addEventListener('mouseleave', () => {
     vol2.setAttribute('id','vol_off')
-    VolYN = 0
 })
 
-if (VolYN = 1) {
 vol2.addEventListener('mouseenter', () => {
     vol2.setAttribute('id','vol_on')
-    /*VolYN = 1*/
 })
-}
-else if(VolYN=1){
 vol2.addEventListener('mouseleave', () => {
     vol2.setAttribute('id','vol_off')
-    VolYN = 0
 })
-}
