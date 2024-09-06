@@ -142,6 +142,7 @@ else if (pg.value > 80){
 
 
 const progVol = document.getElementById('prog_vol')
+let img_vol = document.getElementById('img_vol')
 
 //barras para clicar e pular minutagem
 progressBar.addEventListener('click', (ev)=>{
@@ -153,7 +154,18 @@ progVol.addEventListener('click', (ev)=>{
     let newVol = (ev.offsetX / progVol.offsetWidth) * 1
     progVol.value = newVol
     MA.volume = progVol.value
+    if (progVol.value >= 0.7) {
+        img_vol.src = "imgs-msc_player/max-volume.png"
+    }
+    else if (progVol.value >= 0.4 && progVol.value < 0.7) {
+        img_vol.src = "imgs-msc_player/medium-volume.png"
+    }
+    else if (progVol.value >=0.1) {
+        img_vol.src = "imgs-msc_player/low-volume.png"
+    }
 })
+
+    
 //esse parece não fazer nada
 /*progressBar.addEventListener("input", () => {
     const value = progressBar.value;
@@ -164,20 +176,32 @@ progVol.addEventListener('click', (ev)=>{
 
 const vol = document.getElementById('volume')
 const vol2 = document.getElementById('volume2')
+const volind = document.getElementById('volind')
+
 
 vol.addEventListener('mouseenter', () => {
+    let volin = 0
     vol2.setAttribute('id','vol_on')
+    volin = 1
+    volind.innerText = volin
     /*vol2.style.display = 'block'
     vol2.style.transition = '0.5s'*/
     
-})
-vol.addEventListener('mouseleave', () => {
-    vol2.setAttribute('id','vol_off')
+    vol.addEventListener('mouseleave', () => {
+        vol2.setAttribute('id','vol_off')
+        volin = 0
+        volind.innerText = volin
+    })
 })
 
-vol2.addEventListener('mouseenter', () => {
-    vol2.setAttribute('id','vol_on')
+
+let volin2 = 0
+if (volin2 = 1){
+    let volin = 0
+    vol2.addEventListener('mouseenter', () => {
+        vol2.setAttribute('id','vol_on')
+        volind.innerText = volin
 })
-vol2.addEventListener('mouseleave', () => {
+}  else {  vol2.addEventListener('mouseleave', () => {
     vol2.setAttribute('id','vol_off')
-})
+})}

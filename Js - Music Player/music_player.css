@@ -155,41 +155,49 @@ body {
     
 }
 #volume {
-    height: 20px;
-    width: 20px;
-    background-color: coral;
+    margin-top: -4px;
+    height: 34px;
+    width: 37px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}#img_vol {
+    width: 36px;
+    height: 36px;
 }
-/*#volume2:hover {
-    flex: 2;
-}*/
 #volume2 {
     /*position: absolute;*/
     margin-top: -10px;
+    margin-left: -10px;
     height: 40px;
     width: 160px;
     opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4px 30px 30px 4px;
+    border-radius: 14px 30px 30px 14px;
 }
 #vol_off {
      /*margin-left: 150px;
    position: absolute;*/
     margin-top: -10px;
+    margin-left: -8px;
     height: 40px;
     width: 160px;
     opacity: 0;
     transition: 0.5s;
+    display: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4px 30px 30px 4px;
+    border-radius: 14px 30px 30px 14px;
 }
 #vol_on {
     /*flex: 2;
     position: absolute;*/
     margin-top: -10px;
+    margin-left: -8px;
     height: 40px;
     width: 160px;
     background-color: rgb(18, 19, 19);
@@ -201,7 +209,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4px 30px 30px 4px;
+    border-radius: 14px 30px 30px 14px;
     /*display: block*/
     
 }
@@ -213,7 +221,7 @@ body {
     width: 30px;
     height: 30px;
 }*/
-#volin {
+#volind {
     font-size: 50px;
     color: white;
 }
