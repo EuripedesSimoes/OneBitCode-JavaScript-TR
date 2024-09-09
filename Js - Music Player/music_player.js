@@ -10,12 +10,11 @@ const PP = document.getElementById('PlayPause')
 const MA = document.getElementById('musicAudio')
 const passar = document.getElementById('Next')
 const voltar = document.getElementById('Back')
-let root = document.querySelector(':root')
 
 const progressBar = document.getElementById("myProgress");
 const ponto = document.querySelector('.ponto')
 /*
-const barra = document.querySelector('.barra')
+let root = document.querySelector(':root')
 */
 
 
@@ -165,43 +164,30 @@ progVol.addEventListener('click', (ev)=>{
     }
 })
 
+
+import {vol, vol2} from "./funcoes.js"
+vol.addEventListener('mouseenter', () => {
+    vol2.setAttribute('id','vol_on')
+    /*vol2.style.display = 'block'
+    vol2.style.transition = '0.5s'*/
     
+    vol.addEventListener('mouseleave', () => {
+        vol2.setAttribute('id','vol_off')
+    })
+    
+})
+
+vol2.addEventListener('mouseenter', () => {
+    vol2.setAttribute('id','vol_on')
+})
+vol2.addEventListener('mouseleave', () => {
+    vol2.setAttribute('id','vol_off')
+})
+
+
 //esse parece não fazer nada
 /*progressBar.addEventListener("input", () => {
     const value = progressBar.value;
     const containerWidth = progressBar.offsetWidth;
     const pontoPosition = (value * 3) * containerWidth;
 });*/
-
-
-const vol = document.getElementById('volume')
-const vol2 = document.getElementById('volume2')
-const volind = document.getElementById('volind')
-
-
-vol.addEventListener('mouseenter', () => {
-    let volin = 0
-    vol2.setAttribute('id','vol_on')
-    volin = 1
-    volind.innerText = volin
-    /*vol2.style.display = 'block'
-    vol2.style.transition = '0.5s'*/
-    
-    vol.addEventListener('mouseleave', () => {
-        vol2.setAttribute('id','vol_off')
-        volin = 0
-        volind.innerText = volin
-    })
-})
-
-
-let volin2 = 0
-if (volin2 = 1){
-    let volin = 0
-    vol2.addEventListener('mouseenter', () => {
-        vol2.setAttribute('id','vol_on')
-        volind.innerText = volin
-})
-}  else {  vol2.addEventListener('mouseleave', () => {
-    vol2.setAttribute('id','vol_off')
-})}

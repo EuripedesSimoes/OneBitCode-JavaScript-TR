@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: rgb(199, 44, 44);
+    background-color: gray;
     background-image: var(--bg1);
     background-position: center top;
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@ body {
 }
 
 .main {
-    height: 630px;
+    height: 627px;
     width: 340px;
     background-color: rgba(114, 138, 146, 0.27);
     /*
@@ -92,14 +92,14 @@ body {
 }.tempo {
     display: flex;
     column-gap: 10px;
-    padding: 15px 20px;
-    font-size: 20px;
+    padding: 15px 30px;
+    font-size: 22px;
     color: aliceblue;
 }
 
 
 .div_pass {
-    height: 105px;
+    height: 90px;
     width: auto;
     /*
     border: 1px dashed yellow;*/
@@ -123,8 +123,8 @@ body {
     cursor: pointer;
 }
 .div_pass button img {
-    width: 86px;
-    height: 86px;
+    width: 78px;
+    height: 78px;
     opacity: 0.5;
 }
 .div_pass button img:hover{
@@ -156,10 +156,11 @@ body {
 }
 #volume {
     margin-top: -4px;
-    height: 34px;
-    width: 37px;
+    height: 36px;
+    width: 40px;
     background-color: #ccc;
     display: flex;
+    justify-content: center;
     align-items: center;
     border-radius: 50%;
 }#img_vol {
@@ -168,7 +169,7 @@ body {
 }
 #volume2 {
     /*position: absolute;*/
-    margin-top: -10px;
+    margin-top: -7px;
     margin-left: -10px;
     height: 40px;
     width: 160px;
@@ -181,7 +182,7 @@ body {
 #vol_off {
      /*margin-left: 150px;
    position: absolute;*/
-    margin-top: -10px;
+    margin-top: -6px;
     margin-left: -8px;
     height: 40px;
     width: 160px;
@@ -196,7 +197,7 @@ body {
 #vol_on {
     /*flex: 2;
     position: absolute;*/
-    margin-top: -10px;
+    margin-top: -6px;
     margin-left: -8px;
     height: 40px;
     width: 160px;
